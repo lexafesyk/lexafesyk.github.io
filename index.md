@@ -7,8 +7,8 @@ title: Home
 
 Sitemap:
 
-- [Posts page](/crispy-dollop/posts/)
+- [Posts page](/posts/)
 
-- [Tags example](/crispy-dollop/tags/)
+- [Tags example](/tags/)
 
-- [About page](/crispy-dollop/about/)
+- [About page](/about/)
