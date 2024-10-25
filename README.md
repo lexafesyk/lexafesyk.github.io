@@ -1,2 +1,2 @@
 # lexafesyk.github.io
-Oleksii Fesyk personal website
+Oleksii Fesyk personal blog website
