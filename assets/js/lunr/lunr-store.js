@@ -1,13 +1,7 @@
 var store = [{
-        "title": "Post 1",
-        "excerpt":"Post 1 Header   Post 1 Content  ","categories": [],
-        "tags": ["tag1","tag2"],
-        "url": "/2024/09/24/post-1.html",
-        "teaser": null
-      },{
-        "title": "Post 2",
-        "excerpt":"Post 2 Header   Post 2 Content  ","categories": [],
-        "tags": ["tag1","tag3"],
-        "url": "/2024/10/21/post-2.html",
+        "title": "There is no masculinity crisis. It's patriarchy that is being threatened.",
+        "excerpt":"Cry it out: A healthy response to your damaged ego   Feeling upset because you can’t objectify women anymore?   That’s okay.   Crying is a perfectly healthy way to process emotions. Admitting that you wanted to hurt others is the first step toward growth.   Sad? Good. That’s your conscience waking up.  ","categories": [],
+        "tags": ["feminism","masculinity"],
+        "url": "/2025/04/20/post-1.html",
         "teaser": null
       }]
