@@ -1,7 +1,7 @@
 var store = [{
-        "title": "There is no masculinity crisis. It's patriarchy that is being threatened.",
-        "excerpt":"Cry it out: A healthy response to your damaged ego   Feeling upset because you can’t objectify women anymore?   That’s okay.   Crying is a perfectly healthy way to process emotions. Admitting that you wanted to hurt others is the first step toward growth.   Sad? Good. That’s your conscience waking up.  ","categories": [],
-        "tags": ["feminism","masculinity"],
-        "url": "/2025/04/20/post-1.html",
+        "title": "I live by the Dao.",
+        "excerpt":"I am a Daoist. I can not tell you what it is. But I can tell what it is not. Daoism is not Zen Buddhism. The idea of non-duality (Advaita) is the main pillar of both Buddism and Daoism. It means that the world as we see it is an...","categories": [],
+        "tags": ["dao"],
+        "url": "/2025/04/20/dao.html",
         "teaser": null
       }]
