@@ -18,6 +18,6 @@ Here I expose russian imperialism: <span style="color: #780607">__Bloody Russian
 
 I also post memes on [Threads](https://www.threads.net/@0m4r.f4t1),
 rate movies on [IMDb](https://www.imdb.com/user/ur196926322/),
-and books on [StoryGraph](https://app.thestorygraph.com/).
+and books on [StoryGraph](https://app.thestorygraph.com/profile/lexafesyk).
 
 Contact me ☺️ [WhatsApp](https://wa.me/+380964817296) / [Telegram](https://t.me/oleksiyfesyk)
