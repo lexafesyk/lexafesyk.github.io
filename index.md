@@ -2,7 +2,6 @@
 layout: home
 title: Hello!👋
 ---
-<script src="/assets/javascript/main.js"></script>
 
 My name is __Oleksii__, nice to meet you!
 

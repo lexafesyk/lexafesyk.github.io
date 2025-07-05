@@ -1,0 +1,76 @@
+/* Custom styles for the tooltips and triangles */
+/* File: /assets/css/tooltips.css */
+
+.tooltip {
+    position: absolute;
+    background-color: #1f2937; /* bg-gray-800 */
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    z-index: 10;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    font-family: 'Inter', sans-serif;
+}
+
+/* Base style for the triangle */
+.tooltip::after {
+    content: "";
+    position: absolute;
+    border-width: 6px;
+    border-style: solid;
+}
+
+/* --- Triangle Positions --- */
+
+/* Triangle pointing UP (attached to the bottom of the tooltip) */
+.tooltip-arrow-up::after {
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: #1f2937 transparent transparent transparent;
+}
+
+/* Triangle pointing DOWN (attached to the top of the tooltip) */
+.tooltip-arrow-down::after {
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: transparent transparent #1f2937 transparent;
+}
+
+/* Triangle pointing LEFT (attached to the right of the tooltip) */
+.tooltip-arrow-left::after {
+    top: 50%;
+    left: 100%;
+    transform: translateY(-50%);
+    border-color: transparent transparent transparent #1f2937;
+}
+
+/* Triangle pointing RIGHT (attached to the left of the tooltip) */
+.tooltip-arrow-right::after {
+    top: 50%;
+    right: 100%;
+    transform: translateY(-50%);
+    border-color: transparent #1f2937 transparent transparent;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 32rem; /* Equivalent to max-w-lg */
+    aspect-ratio: 1 / 1;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem; /* Equivalent to my-8 */
+    margin-bottom: 2rem;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem; /* Equivalent to rounded-lg */
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Equivalent to shadow-xl */
+}
