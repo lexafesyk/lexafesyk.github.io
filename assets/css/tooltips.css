@@ -1,115 +1,92 @@
-/* --- A Simple Modern CSS Reset --- */
-/* File: /assets/css/tooltips.css */
-
-*, *::before, *::after {
-    box-sizing: border-box;
+.image-container {
+    position: relative;
+    margin: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-body, h1, h2, h3, h4, p, figure, blockquote, dl, dd {
-    margin: 0;
-}
-
-ul[role='list'], ol[role='list'] {
-    list-style: none;
-}
-
-html:focus-within {
-    scroll-behavior: smooth;
-}
-
-body {
-    min-height: 100vh;
-    text-rendering: optimizeSpeed;
-    line-height: 1.5;
-}
-
-a:not([class]) {
-    text-decoration-skip-ink: auto;
-}
-
-img, picture {
-    max-width: 100%;
+/* The image itself */
+.image-container img {
     display: block;
+    width: 100%;
+    height: auto;
 }
 
-input, button, textarea, select {
-    font: inherit;
-}
-/* --- End of Reset --- */
-
-/* Custom styles for the tooltips and triangles */
-/* File: /assets/css/tooltips.css */
-
+/* --- General Tooltip Styling --- */
+/* Common styles for all tooltips */
 .tooltip {
-    position: absolute;
-    background-color: #1f2937; /* bg-gray-800 */
-    color: white;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
+    position: absolute; /* Positions the tooltip relative to .image-container */
+    background-color: #D6D6D6;
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    white-space: nowrap; /* Prevents text from wrapping */
+    visibility: visible; /* Ensures tooltips are always visible */
+    opacity: 1;
     z-index: 10;
-    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-    font-family: 'Inter', sans-serif;
 }
 
-/* Base style for the triangle */
+/* --- The Triangle/Arrow --- */
+/* The ::after pseudo-element is used to create the triangle.
+   This is done by using borders and making the element have no size. */
 .tooltip::after {
-    content: "";
+    content: '';
     position: absolute;
-    border-width: 6px;
+    width: 0;
+    height: 0;
     border-style: solid;
 }
 
-/* --- Triangle Positions --- */
+/* --- Tooltip Variations (Triangle Placement) --- */
 
-/* Triangle pointing UP (attached to the bottom of the tooltip) */
-.tooltip-arrow-up::after {
-    top: 100%;
-    left: 50%;
+/* 1. Tooltip with triangle on the bottom (pointing up) */
+.tooltip.bottom-arrow {
+    /* The transform is key to keeping the triangle tip stable.
+       It moves the tooltip box left by 50% of its own width,
+       so the center of the box is aligned with the 'left' percentage. */
     transform: translateX(-50%);
-    border-color: #1f2937 transparent transparent transparent;
+}
+.tooltip.bottom-arrow::after {
+    top: 100%; /* Position the triangle at the bottom of the tooltip */
+    left: 50%; /* Center the triangle horizontally */
+    margin-left: -8px; /* Nudge it left by half its width to be perfectly centered */
+    border-width: 8px 8px 0 8px; /* Creates an upward-pointing triangle */
+    border-color: #D6D6D6 transparent transparent transparent;
 }
 
-/* Triangle pointing DOWN (attached to the top of the tooltip) */
-.tooltip-arrow-down::after {
-    bottom: 100%;
-    left: 50%;
+/* 2. Tooltip with triangle on the top (pointing down) */
+.tooltip.top-arrow {
     transform: translateX(-50%);
-    border-color: transparent transparent #1f2937 transparent;
+}
+.tooltip.top-arrow::after {
+    bottom: 100%; /* Position at the top of the tooltip */
+    left: 50%;
+    margin-left: -8px;
+    border-width: 0 8px 8px 8px; /* Creates a downward-pointing triangle */
+    border-color: transparent transparent #D6D6D6 transparent;
 }
 
-/* Triangle pointing LEFT (attached to the right of the tooltip) */
-.tooltip-arrow-left::after {
-    top: 50%;
-    left: 100%;
+/* 3. Tooltip with triangle on the right (pointing left) */
+.tooltip.right-arrow {
+    /* Moves the tooltip up by 50% of its own height to center it vertically */
     transform: translateY(-50%);
-    border-color: transparent transparent transparent #1f2937;
+}
+.tooltip.right-arrow::after {
+    top: 50%; /* Center vertically */
+    left: 100%; /* Position at the right edge of the tooltip */
+    margin-top: -8px; /* Nudge up by half its height to be perfectly centered */
+    border-width: 8px 0 8px 8px; /* Creates a left-pointing triangle */
+    border-color: transparent transparent transparent #D6D6D6;
 }
 
-/* Triangle pointing RIGHT (attached to the left of the tooltip) */
-.tooltip-arrow-right::after {
-    top: 50%;
-    right: 100%;
+/* 4. Tooltip with triangle on the left (pointing right) */
+.tooltip.left-arrow {
     transform: translateY(-50%);
-    border-color: transparent #1f2937 transparent transparent;
 }
-
-.image-container {
-    position: relative;
-    width: 100%;
-    max-width: 32rem; /* Equivalent to max-w-lg */
-    aspect-ratio: 1 / 1;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2rem; /* Equivalent to my-8 */
-    margin-bottom: 2rem;
-}
-
-.main-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 0.5rem; /* Equivalent to rounded-lg */
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1); /* Equivalent to shadow-xl */
+.tooltip.left-arrow::after {
+    top: 50%;
+    right: 100%; /* Position at the left edge of the tooltip */
+    margin-top: -8px;
+    border-width: 8px 8px 8px 0; /* Creates a right-pointing triangle */
+    border-color: transparent #D6D6D6 transparent transparent;
 }
