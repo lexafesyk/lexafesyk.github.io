@@ -19,4 +19,4 @@ I also post memes on [Threads](https://www.threads.net/@0m4r.f4t1),
 rate movies on [IMDb](https://www.imdb.com/user/ur196926322/),
 and books on [StoryGraph](https://app.thestorygraph.com/profile/lexafesyk).
 
-Contact me ☺️ [WhatsApp](https://wa.me/+380964817296) / [Telegram](https://t.me/oleksiyfesyk)
+Contact me on [WhatsApp](https://wa.me/+380964817296) or [Telegram](https://t.me/oleksiyfesyk) ☺️
